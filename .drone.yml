@@ -6,7 +6,6 @@ steps:
   image: mysql
   commands:
   - mysql -u root -h database --execute="SELECT VERSION();"
-  - 
 
 ---
   kind: pipeline
@@ -16,7 +15,7 @@ steps:
   - name: nodeTest
     image: node
     commands:
-      - npm i -S mysql
+      - npm install -g mysql
       - npm install
       - npm install -g mocha
       - npm -g install chai
