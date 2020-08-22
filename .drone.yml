@@ -1,15 +1,4 @@
-kind: pipeline
-name: default
 
-steps:
-- name: test
-  image: mysql
-  commands:
-  - sleep 20
-  - mysql.server start
-  - mysql -u root -p "password"
-
----
   kind: pipeline
   name: nodeEval
 
@@ -17,7 +6,9 @@ steps:
   - name: nodeTest
     image: node
     commands:
+      - sleep 15
       - npm install -g mysql
+      - mysql --version
       - npm install
       - npm install -g mocha
       - npm -g install chai
