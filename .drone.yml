@@ -6,7 +6,6 @@
   - name: nodeTest
     image: node
     commands:
-      - sleep 5
       - npm install -g mysql
       - npm install
       - npm install -g mocha
