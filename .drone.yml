@@ -6,7 +6,7 @@ steps:
   image: mysql
   commands:
   - sleep 20
-  - mysql -u root -h database --execute="SELECT VERSION();"
+  - mysql -u root -p "password"
 
 ---
   kind: pipeline
