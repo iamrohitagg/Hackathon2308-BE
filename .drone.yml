@@ -1,0 +1,33 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: mysql
+  commands:
+  - mysql -u root -h database --execute="SELECT VERSION();"
+  - 
+
+---
+  kind: pipeline
+  name: nodeEval
+
+  steps:
+  - name: nodeTest
+    image: node
+    commands:
+      - npm i -S mysql
+      - npm install
+      - npm install -g mocha
+      - npm -g install chai
+      - npm -g install chai-http
+      - npm -g install mochawesome
+      - mocha test.js --reporter mochawesome --exit
+
+
+services:
+- name: database
+  image: mysql
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    MYSQL_DATABASE: hackathon2308

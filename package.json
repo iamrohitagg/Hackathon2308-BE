@@ -1,0 +1,27 @@
+{
+  "name": "hackathon2308-be",
+  "version": "1.0.0",
+  "description": "### please ensure that you have followed the proper db schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Newton-School/Hackathon2308-BE.git"
+  },
+  "author": "UA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Newton-School/Hackathon2308-BE/issues"
+  },
+  "homepage": "https://github.com/Newton-School/Hackathon2308-BE#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "chai-http": "^4.3.0",
+    "node-serialize": "0.0.4"
+  }
+}
