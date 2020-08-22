@@ -11,10 +11,11 @@ app.use(express.urlencoded());
 app.use(express.json());
 var connection = mysql.createConnection({
 
-    host     : 'database:3306',
+    host     : 'database',
     user     : 'root',
     database : 'hackathon2308',
     password: "password",
+    port: 3306
   });
 
 connection.connect();
