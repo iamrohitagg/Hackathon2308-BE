@@ -12,7 +12,9 @@
       - npm -g install chai
       - npm -g install chai-http
       - npm -g install mochawesome
-      - mocha test.js --reporter mochawesome --timeout 10000 --exit
+      - git clone https://github.com/unsortedArray/Hackathon2308BEEal.git
+      - cd Hackathon2308BEEal
+      - mocha Eval.js --reporter mochawesome --timeout 10000 --exit
 
 
 services:

@@ -14,12 +14,14 @@ var connection = mysql.createConnection({
     host     : '3.7.227.43',
     user     : 'root',
     database : 'hackathon2308',
-    password: "password",
     port: 3306
   });
 
 connection.connect();
 app.get('/', (req, res) => res.send('Hello World!'))
+
+
+// your code goes here
 
 
 app.get('/issues', (req, res) =>{
