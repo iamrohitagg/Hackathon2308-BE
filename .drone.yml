@@ -6,6 +6,7 @@ steps:
   image: mysql
   commands:
   - sleep 20
+  - mysql.server start
   - mysql -u root -p "password"
 
 ---
