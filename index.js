@@ -23,7 +23,7 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 // your code goes here
 
-
+// here
 app.get('/issues', (req, res) =>{
     const page = req.query.page;
     connection.query("select * from `issues` limit 10 offset 2",function(err, result) {
