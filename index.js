@@ -26,8 +26,10 @@ app.get('/issues', (req, res) =>{
     const page = req.query.page;
     connection.query("select * from `issues` limit 10 offset 2",function(err, result) {
         if(err) throw err;
-        return res.json({message: "Successfully fetched 10 records", issues: result})
+        //res.json({message: "Successfully fetched 10 records", issues: result})
+        res.send({status: res.status,issues: result })
     }  )
+   
 })
 
 app.post('/data', function(req, res){
