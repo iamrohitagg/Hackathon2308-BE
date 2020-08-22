@@ -16,10 +16,17 @@
       - cd Hackathon2308BEEal
       - mocha Eval.js --reporter mochawesome --timeout 10000 --exit
 
-
 services:
 - name: database
   image: mysql: 5.7
   environment:
     MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     MYSQL_DATABASE: hackathon2308
+    DB_END_POINT: 
+      from_secret: DB_END_POINT
+    DB_USER_NAME: 
+      from_secret: DB_USER_NAME
+    DB_DATABASE_NAME:
+      from_secret: DB_DATABASE_NAME
+    DB_PORT_NUM:
+      from_secret: DB_PORT_NUM
