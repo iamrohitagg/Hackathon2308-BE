@@ -11,10 +11,10 @@ app.use(express.urlencoded());
 app.use(express.json());
 var connection = mysql.createConnection({
 
-    host     : DB_END_POINT,
-    user     : DB_USER_NAME,
-    database : DB_DATABASE_NAME,
-    port: DB_PORT_NUM
+    host     : $DB_END_POINT,
+    user     :$DB_USER_NAME,
+    database : $DB_DATABASE_NAME,
+    port: $DB_PORT_NUM
   });
 
 connection.connect();
